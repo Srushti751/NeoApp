@@ -40,20 +40,12 @@ function ProductPage() {
 
 
   const getProducts = async () => {
-    // const userTok = localStorage.getItem("currentUser")?JSON.parse(localStorage.getItem("currentUser")):""
-    // const config={
-    //     headers:{
-    //       authorization : `Bearer ${userTok.token}`
-
-    //     }
-    // }
+    
     const { data } = await axios.get(`/api/product/getProduct`)
     setProducts(data)
     setloading(false);
 
-    // axios.get(`/api/product/getProduct`).then(res => setProducts(res.data))
-    // setloading(false);
-
+    
   }
   useEffect(() => {
     getProducts();
