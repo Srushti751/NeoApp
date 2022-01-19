@@ -1,5 +1,5 @@
 const express = require('express')
-// const morgan = require('morgan')
+
 const connectDB = require('./config/config.js')
 const dotenv = require("dotenv");
 const cookieSession = require("cookie-session");
@@ -24,7 +24,7 @@ app.use(
       credentials: true,
     })
   );
-// app.use(morgan("dev"))
+
 app.use(express.urlencoded({extended:false}))
 app.use('/images', express.static('images'));
 app.use(
