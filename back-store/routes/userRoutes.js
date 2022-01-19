@@ -183,10 +183,9 @@ router.post('/new-password', (req, res) => {
 })
 
 router.post('/changePassword',(req, res) => {
-    // const newPassword = req.body.newPass
-    // const oldPassword = req.body.old
+    
     const {newPassword,oldPassword,username} = req.body
-    // const user = req.body.user
+ 
     console.log("pass tok",newPassword,oldPassword)
 
     userModel.findOne({ name:username })
@@ -211,7 +210,7 @@ router.post('/changePassword',(req, res) => {
 
 
 router.get("/profile_by_name", async (req, res) => {
-    // let type = req.query.type
+  
     let profileName = req.query.id
 
     // console.log("req.query.id", req.query.id)
