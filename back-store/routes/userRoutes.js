@@ -76,12 +76,12 @@ router.post("/register",validateEmployee,validateData, async (req, res) => {
 
 router.post("/login", async (req, res) => {
     const { email, password } = req.body;
-    // user && (await user.matchPassword(password))
+   
     try {
         const user = await userModel.findOne({ email })
-        // const user = await userModel.find({email,password})
+      
         if (user && (await user.matchPassword(password))) {
-            // if(user.length > 0){
+           
             console.log(user.email)
 
             const currentUser = {
@@ -164,7 +164,7 @@ router.post('/new-password', (req, res) => {
             if (!user) {
                 return res.status(422).json({ error: "Try again session expired" })
             }
-            // bcrypt.hash(newPassword, 12).then(hashedpassword => {
+           
                 user.password = newPassword
                 user.resetToken = undefined
                 user.otp = undefined
@@ -172,7 +172,7 @@ router.post('/new-password', (req, res) => {
                 user.save().then((saveduser) => {
                     res.json({ message: "password updated success" })
                 })
-            // })
+          
        
             // user.save().then((saveduser) => {
             //     res.json({ message: "password updated success" })
