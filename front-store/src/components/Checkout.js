@@ -11,7 +11,7 @@ import Sidelist from './Myaccount/Sidelist'
 
 
 function Checkout(props) {
-  // const orderId = props.match.params.orderId
+  
 
   const [orders, setOrders] = useState([])
   const [card, setCard] = useState("")
@@ -99,10 +99,10 @@ function Checkout(props) {
 
   const afterClick = () => {
     removeCart()
-    // window.location.href = "http://localhost:3001/final";
+   
     setSuccess(true)
     setTimeout(() => {
-      window.location.href = "http://localhost:3000/commonProducts";
+      window.location.href = "/commonProducts";
 
     }, 3000);
   }
