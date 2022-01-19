@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { Col, Row, Container, Card, Button, Nav, Table } from 'react-bootstrap'
 import axios from 'axios'
-// }
+
 import { ToastContainer, toast } from 'react-toastify';
 
-// import jwt_decode from 'jwt-decode'
+
 
 
 function Cart() {
@@ -17,13 +17,9 @@ function Cart() {
     const userData = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem("currentUser")) : ""
     const username = userData.name
 
-    // Authentication part
-    useEffect(() => {
-        // if (localStorage.getItem('currentUser') != undefined) {
-        //  
-        getOrder()
-
-        // }
+ 
+    useEffect(() => {  
+        getOrder()   
     }, [])
 
     const notify = () => toast("Login to Checkout");
@@ -38,9 +34,8 @@ function Cart() {
             }
         }
 
-
-        // const { data } = await axios.get(`/api/product/getCartData/${username}`, config)
-        // setOrders(data)
+        //Authenticating user
+    
         if (userTok.token) {
             const { data } = await axios.get(`/api/product/getCartData/${username}`, config)
             setOrders(data)
