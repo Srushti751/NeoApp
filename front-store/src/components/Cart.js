@@ -88,9 +88,7 @@ function Cart() {
         })
     }
 
-    // useEffect(() => {
-    //     getOrder()
-    //   }, [])
+
     return (
         <div>
             {console.log(orders)}
