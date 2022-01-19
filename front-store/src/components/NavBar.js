@@ -48,11 +48,7 @@ function NavBar() {
                     axios.put(`api/product/Loginuser/${resObject.user.displayName}`).then(res=>{
                         console.log("user updated")
                     })
-                    // const data = { name: resObject.user.displayName }
-                    //   axios.post('/api/users/register',data)
-
-                    // dispatch(registerUser(data))
-                    // console.log(user)
+                   
                 })
                 .catch((err) => {
                     console.log(err);
@@ -132,12 +128,12 @@ function NavBar() {
                                 Search
                             </button>
                         </form>
-                        {/* <Search searchTerm = {(search)=>setSearch(search)}/> */}
+                       
                         {console.log(search)}
                         <Nav.Link href="/cart" className="navLink btn btn-light btn-sm text-dark ">
                             <span className="cartNum">{orders.length}</span>
 
-                            {/* <ShoppingCartIcon className="text-dark" /> */}
+                           
                             <FontAwesomeIcon  icon={faShoppingCart} size="lg" />
 
                         </Nav.Link>
