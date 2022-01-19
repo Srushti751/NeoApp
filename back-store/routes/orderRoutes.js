@@ -110,15 +110,12 @@ router.put("/updateQty/:prod_id/:scope", (req, res) => {
     let id = req.params.prod_id;
     let scope = req.params.scope;
 
-    // db.cart.update(
-    //     {_id: ObjectId('5b2a3da1f4fd65265c8ab477'), 'items.item._id': ObjectId('5b28d30888afb703508409bb')},
-    //     {$inc: {"items.$.qty": value}} // Pass your increase value here
-    // )
+  
     if (scope == 'inc') {
         orderModel.findByIdAndUpdate(id,
 
             { $inc: { quantity: 1 }}).then(res => console.log("Incremented"))
-            // { $inc: { quantity: 1 }},{ $mul:{product_total:5} }).then(res => console.log("Incremented"))
+          
     }
     else {
         orderModel.findByIdAndUpdate(id,
