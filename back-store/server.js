@@ -37,9 +37,7 @@ app.use(
  
 
 //route
-app.get("/",(req,res)=>{
-    res.send("welcome")
-})
+
 
 
 app.use("/api/users",require('./routes/userRoutes'))
