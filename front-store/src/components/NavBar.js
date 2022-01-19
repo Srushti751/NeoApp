@@ -148,7 +148,6 @@ function NavBar() {
                             >
                                 <span className="text-white">{user ? user.displayName : currentUser ? currentUser.name : ""}</span>
 
-                                {/* <AccountBoxIcon /> */}
                             <FontAwesomeIcon  icon={faUserCircle} size="lg" />
 
                             </a>
