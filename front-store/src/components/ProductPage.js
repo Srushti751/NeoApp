@@ -119,9 +119,7 @@ function ProductPage() {
         console.log(res.data)
 
             console.log("data is saved");
-            // let cartItem=localStorage.getItem("cartProd")?JSON.parse(localStorage.getItem("cartProd")):[]
-            // cartItem.push(payload)
-            // localStorage.setItem("cartProd",JSON.stringify(cartItem))
+           
             window.location.reload();
         })
         .catch((err) => {
@@ -133,14 +131,7 @@ function ProductPage() {
 
   return (
     <>
-      {/* <div className="text-center">
-            <input className="p-3 mt-3 mb-4 " type="text" placeholder="Search..." onChange={(e)=>{setSearch(e.target.value)}}/>
-       map((prod)=>{
-                return(
-                    <p className="text-center ">{prod.product_name}</p>
-                )
-            })}
-        </div> */}
+     
 
       <Container className="text-center">
         <h3 className="text-center m-4 formHead">Popular Products</h3>
