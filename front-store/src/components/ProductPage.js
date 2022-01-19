@@ -176,17 +176,17 @@ function ProductPage() {
                       <Card.Text style={{fontWeight:"600",fontSize:"22px"}}>
                         ₹{piz.product_cost * quantity}
                       </Card.Text>
-                      {/* <Button onClick={(e)=>submit(e,piz.name,piz.image,piz.price,quantity)} variant="warning">Add to cart</Button> */}
+                     
 
                       <div style={{ display: "flex", flexDirection: "column" }}>
 
-                        {/* <Link to={`/product/${piz._id}`}>Details</Link> */}
+                     
 
                         {currentUser || googleUser ? <Button onClick={(e) => submit(e, piz.product_name, piz.product_image, piz.product_cost, quantity)} variant="warning">Add to cart</Button>
                           : <>
                             <Button variant="danger" onClick={(e) => addCartNouser(e, piz.product_name, piz.product_image, piz.product_cost, quantity)}>Add to cart</Button>
 
-                            {/* <Button variant="danger" onClick={notify}>Add to cart</Button> */}
+                           
                             <ToastContainer />
                           </>
                         }
