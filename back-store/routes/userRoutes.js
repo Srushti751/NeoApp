@@ -66,9 +66,9 @@ router.post("/register",validateEmployee,validateData, async (req, res) => {
 
         newblog.save((error) => {
             if (error) {
-                return ((500), res.send("Something went wrong"))
+                return (res.send("Something went wrong"))
             }
-            res.send("Your data is saved in database!!!",newblog)
+            res.send("Your data is saved in database!!!")
 
         })
     }
