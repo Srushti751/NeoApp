@@ -94,27 +94,7 @@ router.get("/getProductColorID/:color_id", async (req, res) => {
     }
 })
 
-// router.get("/getProductCategory/:category_name",async(req,res)=>{
-//     const name = req.params.category_name;
-//     try {
-//         const prod = await productModel.find({category_name:name})
 
-//         res.send(prod)
-//     } catch (error) {
-//         res.json({message:error})
-//     }
-//     })
-
-// router.get("/getProductColor/:color",async(req,res)=>{
-//     const name = req.params.color;
-//     try {
-//         const prod = await productModel.find({color:name})
-
-//         res.send(prod)
-//     } catch (error) {
-//         res.json({message:error})
-//     }
-//     })
 
 router.post("/saveProduct", (req, res) => {
     console.log("Body:", req.body)
